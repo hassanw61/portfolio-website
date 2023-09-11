@@ -39,7 +39,7 @@ const Intro = () => {
 	useEffect(() => {
 		const typedHelloParagraph = new Typed(HelloParagraph.current, {
 			strings: [
-				`<div class="flex flex-col space-y-10"><h1 class="font-semibold text-5xl">I'm FAIQ NADEEM</h1><span class="font-thin text-5xl italic"> However you say hello, I’am ready to listen</span><p class="font-medium text-4xl">5+ years crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.</p></div>`,
+				`<div class="flex flex-col space-y-10"><h1 class="font-semibold text-5xl">I'm FAIQ NADEEM</h1><span class="font-thin text-5xl italic"> However you say 👋, I’am ready to listen</span><p class="font-medium text-4xl">5+ years crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.</p></div>`,
 			],
 			typeSpeed: 5,
 			onStart: () => setHelloTextLoaded(false),

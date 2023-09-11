@@ -1,4 +1,4 @@
-import { LuCode2, LuEdit } from "react-icons/lu";
+import { LuCode2 } from "react-icons/lu";
 import { FaTerminal } from "react-icons/fa";
 
 const CoverLetter = () => {
@@ -42,7 +42,7 @@ const CoverLetter = () => {
 
 				<div className="flex flex-col gap-5">
 					<h1 className="flex items-center gap-2 font-semibold text-3xl text-[#9A1E1E]">
-						<LuEdit />
+						{/* <LuEdit /> */}
 						Front-End Web Development
 					</h1>
 					<p className="font-light text-lg">
