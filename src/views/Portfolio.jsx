@@ -1,128 +1,263 @@
-
+import { Transition } from "@headlessui/react";
+import { Fragment } from "react";
 
 const Portfolio = () => {
+	const projectsList = [
+		{
+			title: "DaffiWallet",
+			headline: "A Blockchain Wallet",
+			description:
+				"Daffi - A blockchain wallet integrated with Node.js, offering crypto swaps, instant transfers, and NFT management. Built security layers based on latest encryption methods. Optimized performance up to 40% that allows very fast response from blockchain network.",
+			projectLink: "https://google.com",
+			images: [
+				"https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+			],
+		},
+		{
+			title: "Connectia",
+			headline: "Fleet Management System",
+			description:
+				"Developed Connectia, a fleet management platform powered by Vue.js, TypeScript, and Google Maps. Incorporated Buefy for an enhanced user interface and used Google Maps API for real-time vehicle tracking, redefining fleet management operations.",
+			projectLink: "https://google.com",
+			images: [
+				"https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+			],
+		},
+		{
+			title: "Task Mastr",
+			headline: "You Tasking Companion",
+			description:
+				"Taskmastr benefited from my skills in UX/UI design and jQuery, where I orchestrated the creation of a visually pleasing and easy-to-navigate website. By integrating JavaScript functionalities, I enhanced task management and user engagement, culminating in a platform that simplifies and enhances task organization.",
+			projectLink: "https://google.com",
+			images: [
+				"https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+			],
+		},
+		{
+			title: "Web Marketers",
+			headline: "All In One market Solution",
+			description:
+				"Web Marketers witnessed my adeptness in WordPress, jQuery, and JavaScript, which I employed to revamp website designs and elevate their online presence. Through thoughtfully designed UX/UI elements and interactive jQuery components, I contributed to crafting websites that effectively communicate their marketing messages and drive engagement.",
+			projectLink: "https://google.com",
+			images: [
+				"https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+				"https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+			],
+		},
+	];
+
+	const workExperiencesList = [
+		{
+			workRole: "Full Stack Developer",
+			company: "NexaQuanta",
+			startDate: "June, 2021",
+			endDate: "present",
+			description:
+				"Developed a blockchain wallet supporting 1000+ assets and NFTs, enabling user-driven transactions.	Engineered custom encryption for robust data storage, geared for large-scale user operations.	Reduced data retrieval times by 40% by designing an efficient API server for quick and secure retrieval of blockchain network data, emphasizing speed and data privacy through caching and multiple authentication layers",
+		},
+		{
+			workRole: "Software Engineer",
+			company: "V2X Network Limited",
+			startDate: "June, 2021",
+			endDate: "present",
+			description:
+				"Collaborated remotely with global teams on a fleet management system serving 500+ active fleets daily.	Led geofencing and route management projects while innovating vehicle remote accessibility solutions.	Accelerated and optimized visual performance by 30%, enhancing fleet views and geofencing rendering on maps.",
+		},
+		{
+			workRole: "Website Developer",
+			company: "Single Solution",
+			startDate: "June, 2021",
+			endDate: "present",
+			description:
+				"Delivered 100+ customer focused and cross browser compatibility websites including e-commerce and portfolio websites.	Launched a teaching platform that connected over 100+ teachers and students, enhancing real-time learning interactions",
+		},
+		{
+			workRole: "Embedded Engineer",
+			company: "NexaQuanta",
+			startDate: "June, 2021",
+			endDate: "present",
+			description:
+				"Designed and Developed 100+ embedded kits for IOT solutions, robotics, integrating different hardware’s.	Contributed to projects that saw a 20% increase in autonomous tasks efficiency by building robots and drones with advanced navigation, interactive capabilities, and accurate GPS tracking.",
+		},
+	];
+
+	const technologiesList = [
+		{
+			title: "Programming Languages",
+			headline: "JavaScript, TypeScript, PHP",
+			description:
+				"Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+		},
+		{
+			title: "Frameworks & Libraries",
+			headline: "NodeJS, Express.js, React, Vite.js, Next.js, Laravel, WebSockets",
+			description:
+				"Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+		},
+		{
+			title: "Design & UI",
+			headline: "TailwindCSS, Bootstrap, Buefy, BulmaCSS, Figma, Adobe Suite",
+			description:
+				"Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+		},
+		{
+			title: "Web & Server Tools",
+			headline: "Restful APIs, AWS S3, Nginx, Apache, Heroku, cPanel",
+			description:
+				"Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+		},
+		{
+			title: "Development Tools",
+			headline: "Git, GitHub, Bitbucket, Jira, Zoho, Trello, Slack, Lighthouse, GTMetrix",
+			description:
+				"Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+		},
+	];
+
 	return (
-		<>
-  <section className="container px-4 py-12 mx-auto">
-    <div className="grid gap-4 mx-4 sm:grid-cols-12">
-      <div className="col-span-12 sm:col-span-3">
-        <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-400">
-          <h3 className="text-3xl font-semibold">Morbi tempor</h3>
-          <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-400">Vestibulum diam nunc</span>
-        </div>
-      </div>
-      <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-        <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
-          <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-            <h3 className="text-xl font-semibold tracking-wide">Donec porta enim vel </h3>
-            <time className="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2020</time>
-            <p className="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-          </div>
-          <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-            <h3 className="text-xl font-semibold tracking-wide">Aliquam sit amet nunc ut</h3>
-            <time className="text-xs tracking-wide uppercase dark:text-gray-400">Jul 2019</time>
-            <p className="mt-3">Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales.</p>
-          </div>
-          <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-            <h3 className="text-xl font-semibold tracking-wide">Pellentesque habitant morbi</h3>
-            <time className="text-xs tracking-wide uppercase dark:text-gray-400">Jan 2016</time>
-            <p className="mt-3">Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-			
-			<div className="-my-6">
+		<Transition appear={true} show={true} enter="transition-opacity duration-500" enterFrom="opacity-0" enterTo="opacity-100">
+			<section className="container px-4 py-12 mx-auto">
+				<div className="grid gap-4 mx-4 sm:grid-cols-12">
+					<div className="col-span-12 sm:col-span-3">
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
+							<h3 className="text-3xl font-semibold text-[#AC4949]">Technologies</h3>
+							<span className="text-sm font-bold text-justify uppercase text-gray-400">
+								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
+								traditional payment systems for a seamless web experience.
+							</span>
+						</div>
+					</div>
 
-    <div className="relative pl-8 sm:pl-32 py-6 group">
-
-        <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The origin</div>
-
-        <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2020</time>
-            <div className="text-xl font-bold text-slate-900">Acme was founded in Milan, Italy</div>
-        </div>
-
-        <div className="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-    </div>
-
-    <div className="relative pl-8 sm:pl-32 py-6 group">
-
-        <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The milestone</div>
-
-        <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2021</time>
-            <div className="text-xl font-bold text-slate-900">Reached 5K customers</div>
-        </div>
-
-        <div className="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-    </div>
-
-    <div className="relative pl-8 sm:pl-32 py-6 group">
-
-        <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The acquisitions</div>
-
-        <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2022</time>
-            <div className="text-xl font-bold text-slate-900">Acquired various companies, inluding Technology Inc.</div>
-        </div>
-
-        <div className="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-    </div>
-
-    <div className="relative pl-8 sm:pl-32 py-6 group">
-
-        <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The IPO</div>
-
-        <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2023</time>
-            <div className="text-xl font-bold text-slate-900">Acme went public at the New York Stock Exchange</div>
-        </div>
-
-        <div className="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-    </div>
-
-</div>
-			<div className="w-full flex flex-col font-Poppins px-8 py-6 space-y-7">
-				<div className="flex flex-col space-y-5">
-					<h1 className="font-semibold text-4xl text-[#9A1E1E]">Cover Letter</h1>
-					<h2 className="font-semibold text-lg text-[#9A1E1E]">
-						A full-stack software engineer with over 10+ years of experience.
-					</h2>
+					<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+						<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-[#ac494980]">
+							{technologiesList?.length > 0 &&
+								technologiesList.map((technology, index) => (
+									<div
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#ac4949ea] before:animate-bounce"
+										key={index}>
+										<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+											{technology?.title}
+										</div>
+										<h3 className="text-xl font-bold text-slate-900">{technology?.headline}</h3>
+										<p className="mt-3">{technology?.description}</p>
+									</div>
+								))}
+						</div>
+					</div>
 				</div>
-				<div>
-					<p className="font-light text-lg text-justify">
-						I have maintained, developed, and launched multiple projects from scratch, carrying the development of its'
-						back-end and front-end codebases. My current toolset includes{" "}
-						<span className="font-semibold text-[#AC4949]">
-							JavaScript, TypeScript, Node.js, React, Next.js, Redux, GraphQL, TailwindCSS, Docker ,
-						</span>{" "}
-						and all the other various frameworks, libraries, and technologies related to them.
-					</p>
-				</div>
+			</section>
 
-				<div>
-					<p className="font-semibold text-lg text-[#AC4949]">I can help you with all the sides of your project:</p>
-					<ul className="list-disc list-inside font-norlam text-md px-5 py-5">
-						<li>verifying good UI/UX design, </li>
-						<li>leading/co-developing the back-end and front-end,</li>
-						<li> setting up the CI/CD,</li>
-						<li> mentoring the team,</li>
-						<li>estimating tasks,</li>
-						<li>researching possible techs,</li>
-						<li>leading, launching and monitoring the project.</li>
-					</ul>
-					<p className="font-normal text-lg italic">Call me a Swiss Army Knife in terms of software.</p>
-				</div>
+			<section className="container px-4 py-12 mx-auto">
+				<div className="grid gap-4 mx-4 sm:grid-cols-12">
+					<div className="col-span-12 sm:col-span-3">
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
+							<h3 className="text-3xl font-semibold text-[#AC4949]">Work History</h3>
+							<span className="text-sm font-bold text-justify uppercase text-gray-400">
+								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
+								traditional payment systems for a seamless web experience.
+							</span>
+						</div>
+					</div>
 
-				<div className="my-4">
-					<hr />
+					<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+						<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
+							{workExperiencesList?.length > 0 &&
+								workExperiencesList.map((experience, index) => (
+									<div
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#AC4949] before:animate-bounce"
+										key={index}>
+										<div className="flex w-full justify-between">
+											<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+												{experience?.workRole}
+											</div>
+											<time className="inline-flex items-center justify-center text-xs font-semibold uppercase w-fit h-6 px-3 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+												{experience?.startDate}, {experience?.endDate}
+											</time>
+										</div>
+										<h3 className="text-lg font-bold text-slate-900 uppercase italic">{experience?.company}</h3>
+										<p className="mt-3">{experience?.description}</p>
+									</div>
+								))}
+						</div>
+					</div>
 				</div>
+			</section>
 
-				
-			</div>
-		</>
+			<section className="container px-4 py-12 mx-auto">
+				<div className="grid gap-4 mx-4 sm:grid-cols-12">
+					<div className="col-span-12 sm:col-span-3">
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
+							<h3 className="text-3xl font-semibold text-[#AC4949]">My Projects</h3>
+							<span className="text-sm font-bold text-justify uppercase text-gray-400">
+								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
+								traditional payment systems for a seamless web experience.
+							</span>
+						</div>
+					</div>
+
+					<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+						<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
+							{projectsList?.length > 0 &&
+								projectsList.map((project, index) => (
+									<div
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#AC4949] space-y-5 before:animate-bounce"
+										key={index}>
+										<div className="flex w-full justify-between">
+											<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+												{project?.title}
+											</div>
+											<p className="inline-flex items-center justify-center text-xs font-semibold uppercase w-fit h-8 px-3 mb-3 sm:mb-0 bg-[#AC4949] text-white rounded-md">
+												More Details
+											</p>
+										</div>
+										<div className="flex w-full space-x-4">
+											<div className="flex flex-col w-[50%]">
+												<h3 className="text-lg font-normal text-gray-600">{project?.headline}</h3>
+												<p className="mt-3">{project?.description}</p>
+											</div>
+
+											<div className="flex flex-col w-[50%]">
+												<div className="grid gap-4">
+													<div>
+														<img
+															className="h-auto max-w-full rounded-lg"
+															src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+															alt=""
+														/>
+													</div>
+													<div className="grid grid-cols-5 gap-4">
+														{project?.images?.length > 0 &&
+															project?.images?.map((image, index) => (
+																<div key={index}>
+																	<img className="h-auto max-w-full rounded-lg" src={image} alt="" />
+																</div>
+															))}
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								))}
+						</div>
+					</div>
+				</div>
+			</section>
+		</Transition>
 	);
 };
 

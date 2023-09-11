@@ -1,9 +1,10 @@
 import { LuCode2 } from "react-icons/lu";
 import { FaTerminal } from "react-icons/fa";
+import { Transition } from "@headlessui/react";
 
 const CoverLetter = () => {
 	return (
-		<>
+		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
 			<div className="w-full flex flex-col font-Poppins px-8 py-6 space-y-7">
 				<div className="flex flex-col space-y-5">
 					<h1 className="font-semibold text-4xl text-[#9A1E1E]">Cover Letter</h1>
@@ -228,7 +229,7 @@ const CoverLetter = () => {
 					</ul>
 				</div>
 			</div>
-		</>
+		</Transition>
 	);
 };
 

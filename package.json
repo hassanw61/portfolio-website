@@ -12,6 +12,7 @@
     "start:all": "concurrently \"npm run dev\" \"npm run start:server\""
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@react-pdf/renderer": "^3.1.12",
     "axios": "^1.5.0",
     "body-parser": "^1.20.2",

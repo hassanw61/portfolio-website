@@ -17,11 +17,11 @@ function App() {
 			{/* Routes content */}
 			<div className="flex-1 p-6 overflow-y-auto md:ml-[20%]">
 				<Routes>
-					<Route path="/*" element={<Intro />} />
 					<Route path="/contact-me" element={<ContactMe />} />
 					<Route path="/cover-letter" element={<CoverLetter />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/curriculum-vitae-cv" element={<CurriculumVitaeCV />} />
+					<Route path="/*" element={<Intro />} />
 				</Routes>
 			</div>
 		</div>

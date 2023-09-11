@@ -1,6 +1,7 @@
+import { Transition } from "@headlessui/react";
 import { useEffect, useRef, useState } from "react";
-import { BsFileEarmarkText } from "react-icons/bs";
 import { FaRegCalendarCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Typed from "typed.js";
 
 const Intro = () => {
@@ -53,24 +54,29 @@ const Intro = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col gap-2 text-[#9A1E1E] font-Poppins md:px-24 py-12 space-y-10">
-			<h1
-				className={`font-semibold text-5xl transition-all duration-500 ${
-					fade ? "opacity-100 transform translate-y-0" : "opacity-0 transform -translate-y-4"
-				}`}>
-				{helloInDifferentLanguages[currentIndex]},
-			</h1>
-			<div ref={HelloParagraph} />
+		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
+			<div className="flex flex-col gap-2 text-[#9A1E1E] font-Poppins md:px-24 py-12 space-y-10">
+				<h1
+					className={`font-semibold text-5xl transition-all duration-500 ${
+						fade ? "opacity-100 transform translate-y-0" : "opacity-0 transform -translate-y-4"
+					}`}>
+					{helloInDifferentLanguages[currentIndex]},
+				</h1>
+				<div ref={HelloParagraph} />
 
-			{helloTextLoaded ? (
-				<button className="flex w-fit items-center gap-2 cursor-pointer px-4 py-2 animate-pulse transition-opacity duration-300 border-0 rounded-lg shadow-xl bg-[#922b2b]">
-					<FaRegCalendarCheck className="text-md text-white" />
-					<p className="text-md text-white">Schedule A Meeting</p>
-				</button>
-			) : (
-				<></>
-			)}
-		</div>
+				{helloTextLoaded ? (
+					<Link
+						to="https://calendly.com/faiq-nadeem"
+						target="__blank"
+						className="flex w-fit items-center gap-2 cursor-pointer px-4 py-2 animate-pulse transition-opacity duration-300 border-0 rounded-lg shadow-xl bg-[#922b2b]">
+						<FaRegCalendarCheck className="text-md text-white" />
+						<p className="text-md text-white">Schedule A Meeting</p>
+					</Link>
+				) : (
+					<></>
+				)}
+			</div>
+		</Transition>
 	);
 };
 
