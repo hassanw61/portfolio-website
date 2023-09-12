@@ -1,35 +1,11 @@
 import { Transition } from "@headlessui/react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
+import { introInfo } from "../assets/data/intro";
 
 const Intro = () => {
-	const introInfo = useMemo(
-		() => ({
-			helloInDifferentLanguages: [
-				"Hello",
-				"Hola",
-				"Bonjour",
-				"Hallo",
-				"Ciao",
-				"Olá",
-				"Здравствуйте",
-				"你好",
-				"こんにちは",
-				"안녕하세요",
-				"مرحبا",
-				"नमस्ते",
-			],
-			whoAmI: "I'm FAIQ NADEEM",
-			headline: "However you say 👋, I’am ready to listen",
-			description:
-				"5+ years of crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.",
-			meetingLink: "https://calendly.com/faiq-nadeem",
-		}),
-		[],
-	);
-
 	const HelloParagraph = useRef(null);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [fade, setFade] = useState(true);
@@ -50,7 +26,7 @@ const Intro = () => {
 
 			return () => clearInterval(interval);
 		}
-	}, [introInfo]);
+	}, []);
 
 	useEffect(() => {
 		const typedHelloParagraph = new Typed(HelloParagraph.current, {

@@ -1,40 +1,12 @@
 import { Transition } from "@headlessui/react";
 import axios from "axios";
 import { useState } from "react";
-import { AiFillPhone, AiOutlineGithub } from "react-icons/ai";
-import { BiLogoLinkedin, BiLogoUpwork, BiLogoWhatsapp } from "react-icons/bi";
-import { BsWhatsapp } from "react-icons/bs";
-import { MdEmail, MdLocationOn } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { contactInfo } from "../assets/data/contactMe";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({});
-
-	const userProfile = {
-		name: "Faiq Nadeem",
-		designation: "Full Stack Developer",
-	};
-
-	const iconClassNames = "text-2xl text-primary cursor-pointer";
-
-	const contactInfo = {
-		email: "chfaiqnadeem@gmail.com",
-		tel: "+923214232028",
-		address: "Lahore, Pakistan",
-		nextAvailable: "October, 2023",
-		description:
-			"Reach Out Today And I'll Provide You With My Comprehensive Onboarding Package Designed For Full-Time Employment	Or Contract Based Jobs. This Package Covers Various Aspects That Potential Employers Often Inquire About, Such As My Salary Expectations And The Seamless Integration Process Into Your Company.",
-	};
-
-	const getInTouchLinks = [
-		{ link: "https://github.com/faiq-nadeem", icon: <AiOutlineGithub className={iconClassNames} /> },
-		{ link: "https://www.linkedin.com/in/faiq-nadeem", icon: <BiLogoLinkedin className={iconClassNames} /> },
-		{ link: "", icon: <AiOutlineGithub className={iconClassNames} /> },
-		{
-			link: "https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F",
-			icon: <BsWhatsapp className={iconClassNames} />,
-		},
-	];
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -60,8 +32,8 @@ const Contact = () => {
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
 			<div className="flex w-full px-10 pt-10 space-x-14">
 				<div className="flex flex-col w-[70%] space-y-5">
-					<h1 className="font-medium text-3xl">Contact Me</h1>
-					<h2 className="font-light text-xl">I am available for hire and open to any ideas of cooperation.</h2>
+					<h1 className="font-medium text-3xl">{contactInfo?.title}</h1>
+					<h2 className="font-light text-xl">{contactInfo?.headline}</h2>
 
 					<form className="space-y-5" onSubmit={handleSubmit}>
 						<div className="flex gap-20">
@@ -123,8 +95,8 @@ const Contact = () => {
 					</div>
 
 					<div className="flex space-x-4">
-						{getInTouchLinks?.length > 0 &&
-							getInTouchLinks.map(
+						{contactInfo?.getInTouchLinks?.length > 0 &&
+							contactInfo.getInTouchLinks.map(
 								(getInTouchLink, index) =>
 									getInTouchLink?.link && (
 										<Link to={getInTouchLink?.link} target="__blank" key={index}>
