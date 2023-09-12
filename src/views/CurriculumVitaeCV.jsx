@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import { base64CV } from "../assets/data/cv";
+import { base64CV } from "../assets/data/base64CV";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { Transition } from "@headlessui/react";
 import { BiCloudDownload } from "react-icons/bi";
