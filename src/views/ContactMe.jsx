@@ -4,9 +4,24 @@ import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { contactInfo } from "../assets/data/contactMe";
+import { AiOutlineGithub } from "react-icons/ai";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({});
+
+	const iconClassNames = "text-2xl text-primary cursor-pointer";
+
+	contactInfo.getInTouchLinks = [
+		{ link: "https://github.com/faiq-nadeem", icon: <AiOutlineGithub className={iconClassNames} /> },
+		{ link: "https://www.linkedin.com/in/faiq-nadeem", icon: <BiLogoLinkedin className={iconClassNames} /> },
+		{ link: "", icon: <AiOutlineGithub className={iconClassNames} /> },
+		{
+			link: "https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F",
+			icon: <BsWhatsapp className={iconClassNames} />,
+		},
+	];
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -87,10 +102,16 @@ const Contact = () => {
 				<div className="lex flex-col w-[30%] space-y-5 items-start pt-10">
 					<div className="space-y-2">
 						<h3 className="text-lg font-medium">
-							Email: <span className="text-primary font-semibold underline">{contactInfo?.email}</span>
+							Email:{" "}
+							<Link to={`mailto:${contactInfo?.email}`} className="text-primary font-semibold underline">
+								{contactInfo?.email}
+							</Link>
 						</h3>
 						<h3 className="text-lg font-medium">
-							Tel: <span className="text-primary font-semibold underline">{contactInfo?.tel}</span>
+							Tel:{" "}
+							<Link to={`tel:${contactInfo?.email}`} className="text-primary font-semibold underline">
+								{contactInfo?.tel}
+							</Link>
 						</h3>
 					</div>
 
@@ -110,7 +131,7 @@ const Contact = () => {
 
 					<div className="flex space-x-2 items-center">
 						<MdLocationOn className="text-xl text-primary cursor-pointer" />
-						<p className="text-primary font-semibold text-lg underline">{contactInfo?.address}</p>
+						<p className="text-primary font-semibold text-lg">{contactInfo?.address}</p>
 					</div>
 
 					<hr className="border-t-2 border-primary my-4 w-full" />
@@ -118,7 +139,9 @@ const Contact = () => {
 					<div>
 						<p className="font-semibold text-lg">
 							Next Available <span className="font-bold">{contactInfo?.nextAvailable}</span>.{" "}
-							<span className="text-primary">Hire Now.</span>
+							<Link to={contactInfo?.hireMeLink} className="text-primary hover:text-secondary underline" target="__blank">
+								Hire Now.
+							</Link>
 						</p>
 					</div>
 

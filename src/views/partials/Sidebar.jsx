@@ -1,31 +1,29 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { BiLogoLinkedin, BiLogoUpwork, BiSolidBriefcase } from "react-icons/bi";
-import { AiOutlineGithub, AiFillPhone } from "react-icons/ai";
-import { BsFileEarmarkText, BsFillFileEarmarkPdfFill, BsFillMenuAppFill, BsStars, BsWhatsapp } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import { BsFileEarmarkText, BsFillFileEarmarkPdfFill, BsStars, BsWhatsapp } from "react-icons/bs";
 import { FaHandshake } from "react-icons/fa";
 import { Transition } from "@headlessui/react";
+import { AiFillPhone, AiOutlineGithub } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 
 const Sidebar = () => {
 	const location = useLocation();
 
-	const userProfile = {
+	const sidebarInfo = {
 		name: "Faiq Nadeem",
 		designation: "Full Stack Developer",
+		getInTouchLinks: [
+			{ link: "https://github.com/faiq-nadeem", icon: <AiOutlineGithub className="text-md" /> },
+			{ link: "https://www.linkedin.com/in/faiq-nadeem", icon: <BiLogoLinkedin className="text-md" /> },
+			{ link: "tel:+92321423028", icon: <AiFillPhone className="text-md" /> },
+			{ link: "mailto:chfaiqnadeem@gmail.com", icon: <MdEmail className="text-md" /> },
+			{ link: "", icon: <BiLogoUpwork className="text-md" /> },
+			{
+				link: "https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F",
+				icon: <BsWhatsapp className="text-md" />,
+			},
+		],
 	};
-	const iconClassNames = "text-md";
-
-	const getInTouchLinks = [
-		{ link: "https://github.com/faiq-nadeem", icon: <AiOutlineGithub className={iconClassNames} /> },
-		{ link: "https://www.linkedin.com/in/faiq-nadeem", icon: <BiLogoLinkedin className={iconClassNames} /> },
-		{ link: "+92321423028", icon: <AiFillPhone className={iconClassNames} /> },
-		{ link: "chfaiqnadeem@gmail.com", icon: <MdEmail className={iconClassNames} /> },
-		{ link: "", icon: <BiLogoUpwork className={iconClassNames} /> },
-		{
-			link: "https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F",
-			icon: <BsWhatsapp className={iconClassNames} />,
-		},
-	];
 
 	return (
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
@@ -39,8 +37,8 @@ const Sidebar = () => {
 						/>
 					</div>
 					<div className="flex flex-col space-y-0">
-						<h1 className="font-medium text-3xl uppercase">{userProfile?.name}</h1>
-						<h1 className="font-light text-2xl">{userProfile?.designation}</h1>
+						<h1 className="font-medium text-3xl uppercase">{sidebarInfo?.name}</h1>
+						<h1 className="font-light text-2xl">{sidebarInfo?.designation}</h1>
 					</div>
 				</div>
 
@@ -52,40 +50,40 @@ const Sidebar = () => {
 					<ul className="flex flex-col transition-all duration-500 text-white ease-in font-medium text-sm">
 						<NavLink
 							to="/intro"
-							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] ${
-								location.pathname === "/intro" ? "bg-[#922b2b] text-white rounded-lg" : ""
+							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary ${
+								location.pathname === "/intro" ? "bg-secondary text-white rounded-lg" : ""
 							}`}>
 							<BsStars className="text-md" />
 							<p className="text-md">Intro</p>
 						</NavLink>
 						<NavLink
 							to="/portfolio"
-							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] ${
-								location.pathname === "/portfolio" ? "bg-[#922b2b] text-white rounded-lg" : ""
+							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary ${
+								location.pathname === "/portfolio" ? "bg-secondary text-white rounded-lg" : ""
 							}`}>
 							<BiSolidBriefcase className="text-md" />
 							<p className="text-md">Portfolio</p>
 						</NavLink>
 						<NavLink
 							to="/cover-letter"
-							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] ${
-								location.pathname === "/cover-letter" ? "bg-[#922b2b] text-white rounded-lg" : ""
+							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary ${
+								location.pathname === "/cover-letter" ? "bg-secondary text-white rounded-lg" : ""
 							}`}>
 							<BsFileEarmarkText className="text-md" />
 							<p className="text-md">Cover Letter</p>
 						</NavLink>
 						<NavLink
 							to="/curriculum-vitae-cv"
-							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] ${
-								location.pathname === "/curriculum-vitae-cv" ? "bg-[#922b2b] text-white rounded-lg" : ""
+							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary ${
+								location.pathname === "/curriculum-vitae-cv" ? "bg-secondary text-white rounded-lg" : ""
 							}`}>
 							<BsFillFileEarmarkPdfFill className="text-md" />
 							<p className="text-md">Curriculum vitae - CV</p>
 						</NavLink>
 						<NavLink
 							to="/contact-me"
-							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] ${
-								location.pathname === "/contact-me" ? "bg-[#922b2b] text-white rounded-lg" : ""
+							className={`flex items-center gap-2 cursor-pointer px-4 py-2 transition-opacity duration-300 hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary ${
+								location.pathname === "/contact-me" ? "bg-secondary text-white rounded-lg" : ""
 							}`}>
 							<FaHandshake className="text-md" />
 							<p className="text-md">Contact Me</p>
@@ -99,12 +97,12 @@ const Sidebar = () => {
 							<h1 className="font-extralight text-md mb-3">Get in touch</h1>
 						</div>
 						<div className="flex w-full justify-start space-x-3">
-							{getInTouchLinks?.length > 0 &&
-								getInTouchLinks.map(
-									(getInTouchLink, index) =>
-										getInTouchLink?.link && (
-											<Link to={getInTouchLink?.link} target="__blank" key={index}>
-												{getInTouchLink?.icon}
+							{sidebarInfo?.getInTouchLinks?.length > 0 &&
+								sidebarInfo.getInTouchLinks.map(
+									(item, index) =>
+										item?.link && (
+											<Link to={item?.link} target="__blank" key={index}>
+												{item?.icon}
 											</Link>
 										),
 								)}
