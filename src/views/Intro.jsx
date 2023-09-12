@@ -40,7 +40,7 @@ const Intro = () => {
 	useEffect(() => {
 		const typedHelloParagraph = new Typed(HelloParagraph.current, {
 			strings: [
-				`<div class="flex flex-col space-y-10"><h1 class="font-semibold text-5xl">I'm FAIQ NADEEM</h1><span class="font-thin text-5xl italic"> However you say 👋, I’am ready to listen</span><p class="font-medium text-4xl">5+ years crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.</p></div>`,
+				`<div class="flex flex-col space-y-10"><h1 class="font-semibold text-5xl">I'm FAIQ NADEEM</h1><span class="font-thin text-5xl italic"> However you say 👋, I’am ready to listen</span><p class="font-medium text-4xl">5+ years of crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.</p></div>`,
 			],
 			typeSpeed: 5,
 			onStart: () => setHelloTextLoaded(false),
@@ -55,7 +55,7 @@ const Intro = () => {
 
 	return (
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
-			<div className="flex flex-col gap-2 text-[#9A1E1E] font-Poppins md:px-24 py-12 space-y-10">
+			<div className="flex flex-col gap-2 text-primary font-Poppins md:px-24 py-12 space-y-10">
 				<h1
 					className={`font-semibold text-5xl transition-all duration-500 ${
 						fade ? "opacity-100 transform translate-y-0" : "opacity-0 transform -translate-y-4"
@@ -68,7 +68,7 @@ const Intro = () => {
 					<Link
 						to="https://calendly.com/faiq-nadeem"
 						target="__blank"
-						className="flex w-fit items-center gap-2 cursor-pointer px-4 py-2 animate-pulse transition-opacity duration-300 border-0 rounded-lg shadow-xl bg-[#922b2b]">
+						className="flex w-fit items-center gap-2 cursor-pointer px-4 py-2 animate-pulse transition-opacity duration-300 border-0 rounded-lg shadow-xl bg-secondary">
 						<FaRegCalendarCheck className="text-md text-white" />
 						<p className="text-md text-white">Schedule A Meeting</p>
 					</Link>

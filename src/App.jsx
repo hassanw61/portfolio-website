@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="App h-screen flex flex-col md:flex-row">
 			{/* Sidebar */}
-			<div className="bg-[#AC4949] shadow-md overflow-y-auto w-full md:fixed md:top-0 md:left-0 md:h-screen md:w-[20%]">
+			<div className="bg-primary shadow-md overflow-y-auto w-full md:fixed md:top-0 md:left-0 md:h-screen md:w-[20%]">
 				<Sidebar />
 			</div>
 

@@ -18,7 +18,7 @@ function CurriculumVitaeCV() {
 	const renderAllPages = () => {
 		const pages = [];
 		for (let i = 1; i <= numPages; i++) {
-			pages.push(<Page key={i} pageNumber={i} width={1000} renderTextLayer={false} />);
+			pages.push(<Page className="shadow-2xl shadow-primary" key={i} pageNumber={i} width={1000} renderTextLayer={false} />);
 		}
 		return pages;
 	};
@@ -53,7 +53,7 @@ function CurriculumVitaeCV() {
 					<div>
 						<button
 							onClick={handleDownloadPDF}
-							className="flex px-3 py-2 space-x-3 items-center bg-[#ac4949] text-white rounded-md hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] transition-colors duration-300">
+							className="flex px-3 py-2 space-x-3 items-center bg-primary text-white rounded-md hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary transition-colors duration-300">
 							<BiCloudDownload className="text-xl" />
 							<p className="text-md font-medium">Download</p>
 						</button>
@@ -61,14 +61,14 @@ function CurriculumVitaeCV() {
 					<div>
 						<button
 							onClick={handleSharePDF}
-							className="flex px-3 py-2 space-x-3 items-center bg-[#ac4949] text-white rounded-md hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-[#922b2b] transition-colors duration-300">
+							className="flex px-3 py-2 space-x-3 items-center bg-primary text-white rounded-md hover:border-0 hover:rounded-lg hover:shadow-lg hover:bg-secondary transition-colors duration-300">
 							<AiOutlineShareAlt />
 							<p className="text-md font-medium">Share</p>
 						</button>
 					</div>
 				</div>
-				<div className="shadow-2xl">
-					<Document file={base64CV} onLoadSuccess={onDocumentLoadSuccess}>
+				<div>
+					<Document className="space-y-10" file={base64CV} onLoadSuccess={onDocumentLoadSuccess}>
 						{renderAllPages()}
 					</Document>
 				</div>

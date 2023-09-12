@@ -7,8 +7,8 @@ const CoverLetter = () => {
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
 			<div className="w-full flex flex-col font-Poppins px-8 py-6 space-y-7">
 				<div className="flex flex-col space-y-5">
-					<h1 className="font-semibold text-4xl text-[#9A1E1E]">Cover Letter</h1>
-					<h2 className="font-semibold text-lg text-[#9A1E1E]">
+					<h1 className="font-semibold text-4xl text-primary">Cover Letter</h1>
+					<h2 className="font-semibold text-lg text-primary">
 						A full-stack software engineer with over 10+ years of experience.
 					</h2>
 				</div>
@@ -16,7 +16,7 @@ const CoverLetter = () => {
 					<p className="font-light text-lg text-justify">
 						I have maintained, developed, and launched multiple projects from scratch, carrying the development of its'
 						back-end and front-end codebases. My current toolset includes{" "}
-						<span className="font-semibold text-[#AC4949]">
+						<span className="font-semibold text-primary">
 							JavaScript, TypeScript, Node.js, React, Next.js, Redux, GraphQL, TailwindCSS, Docker ,
 						</span>{" "}
 						and all the other various frameworks, libraries, and technologies related to them.
@@ -24,7 +24,7 @@ const CoverLetter = () => {
 				</div>
 
 				<div>
-					<p className="font-semibold text-lg text-[#AC4949]">I can help you with all the sides of your project:</p>
+					<p className="font-semibold text-lg text-primary">I can help you with all the sides of your project:</p>
 					<ul className="list-disc list-inside font-norlam text-md px-5 py-5">
 						<li>verifying good UI/UX design, </li>
 						<li>leading/co-developing the back-end and front-end,</li>
@@ -42,7 +42,7 @@ const CoverLetter = () => {
 				</div>
 
 				<div className="flex flex-col gap-5">
-					<h1 className="flex items-center gap-2 font-semibold text-3xl text-[#9A1E1E]">
+					<h1 className="flex items-center gap-2 font-semibold text-3xl text-primary">
 						{/* <LuEdit /> */}
 						Front-End Web Development
 					</h1>
@@ -51,7 +51,7 @@ const CoverLetter = () => {
 						also typed languages, e.g. TypeScript.
 					</p>
 					<p className="font-light text-lg">My current experience and skills in front-end includes:</p>
-					<ul className="flex flex-col gap-4 list-disc list-inside font-light text-lg text-[#333] my-4">
+					<ul className="flex flex-col gap-4 list-disc list-inside font-light text-lg text-primary my-4">
 						<li>
 							lead TypeScript/JavaScript development: bootstrapping, refactoring, improving the structure, reliability, and
 							build setup;
@@ -175,7 +175,7 @@ const CoverLetter = () => {
 						<div className="my-4">
 							<hr />
 						</div>
-						<h1 className="flex items-center gap-2 font-semibold text-3xl text-[#9A1E1E]">
+						<h1 className="flex items-center gap-2 font-semibold text-3xl text-primary">
 							<LuCode2 />
 							Back-End Web Development
 						</h1>
@@ -207,7 +207,7 @@ const CoverLetter = () => {
 						<div className="my-4">
 							<hr />
 						</div>
-						<h1 className="flex  gap-2 font-semibold text-3xl text-[#9A1E1E]">
+						<h1 className="flex  gap-2 font-semibold text-3xl text-primary">
 							<FaTerminal />
 							What About Dev-Ops, Design, UI, Project Leadership, Team Mentorship ?
 						</h1>

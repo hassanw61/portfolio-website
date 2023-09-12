@@ -76,7 +76,7 @@ const Contact = () => {
 									/>
 								</div>
 
-								<button type="submit" className="px-8 py-2 text-white bg-[#AC4949] font-bold rounded-lg self-start">
+								<button type="submit" className="px-8 py-2 text-white bg-primary font-bold rounded-lg self-start">
 									Submit
 								</button>
 							</div>
@@ -87,37 +87,37 @@ const Contact = () => {
 				<div className="lex flex-col w-[30%] space-y-5 items-start pt-10">
 					<div className="space-y-2">
 						<h3 className="text-lg font-medium">
-							Email: <span className="text-[#AC4949] font-semibold underline">chfaiqnadeem@gmail.com</span>
+							Email: <span className="text-primary font-semibold underline">chfaiqnadeem@gmail.com</span>
 						</h3>
 						<h3 className="text-lg font-medium">
-							Tel: <span className="text-[#AC4949] font-semibold underline">+92 321 4232028</span>
+							Tel: <span className="text-primary font-semibold underline">+92 321 4232028</span>
 						</h3>
 					</div>
 
 					<div className="flex space-x-4">
-						<BiLogoUpwork className="text-3xl text-[#AC4949] cursor-pointer" />
-						<AiOutlineGithub className="text-3xl text-[#AC4949] cursor-pointer" />
-						<BiLogoLinkedin className="text-3xl text-[#AC4949] cursor-pointer" />
-						<BiLogoWhatsapp className="text-3xl text-[#AC4949] cursor-pointer" />
+						<BiLogoUpwork className="text-3xl text-primary cursor-pointer" />
+						<AiOutlineGithub className="text-3xl text-primary cursor-pointer" />
+						<BiLogoLinkedin className="text-3xl text-primary cursor-pointer" />
+						<BiLogoWhatsapp className="text-3xl text-primary cursor-pointer" />
 					</div>
 
-					<hr className="border-t-2 border-[#AC4949] my-4 w-full" />
+					<hr className="border-t-2 border-primary my-4 w-full" />
 
 					<div className="flex space-x-2 items-center">
-						<MdLocationOn className="text-xl text-[#AC4949] cursor-pointer" />
-						<p className="text-[#AC4949] font-semibold text-lg underline">Lahore, Pakistan</p>
+						<MdLocationOn className="text-xl text-primary cursor-pointer" />
+						<p className="text-primary font-semibold text-lg underline">Lahore, Pakistan</p>
 					</div>
 
-					<hr className="border-t-2 border-[#AC4949] my-4 w-full" />
+					<hr className="border-t-2 border-primary my-4 w-full" />
 
 					<div>
 						<p className="font-semibold text-lg">
 							Next Available <span className="font-bold">October 2023</span>.{" "}
-							<span className="text-[#AC4949]">Hire Now.</span>
+							<span className="text-primary">Hire Now.</span>
 						</p>
 					</div>
 
-					<hr className="border-t-2 border-[#AC4949] my-4 w-full" />
+					<hr className="border-t-2 border-primary my-4 w-full" />
 
 					<p className="text-md text-justify">
 						Reach Out Today And I'll Provide You With My Comprehensive Onboarding Package Designed For Full-Time Employment

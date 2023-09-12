@@ -134,8 +134,8 @@ const Portfolio = () => {
 			<section className="container px-4 py-12 mx-auto">
 				<div className="grid gap-4 mx-4 sm:grid-cols-12">
 					<div className="col-span-12 sm:col-span-3">
-						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
-							<h3 className="text-3xl font-semibold text-[#AC4949]">Technologies</h3>
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-primary">
+							<h3 className="text-3xl font-semibold text-primary">Technologies</h3>
 							<span className="text-sm font-bold text-justify uppercase text-gray-400">
 								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
 								traditional payment systems for a seamless web experience.
@@ -144,13 +144,13 @@ const Portfolio = () => {
 					</div>
 
 					<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-						<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-[#ac494980]">
+						<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-primary">
 							{technologiesList?.length > 0 &&
 								technologiesList.map((technology, index) => (
 									<div
-										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#ac4949ea] before:animate-bounce"
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-primary before:animate-bounce"
 										key={index}>
-										<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+										<div className="font-caveat font-medium text-2xl text-primary mb-1 sm:mb-0">
 											{technology?.title}
 										</div>
 										<h3 className="text-xl font-bold text-slate-900">{technology?.headline}</h3>
@@ -165,8 +165,8 @@ const Portfolio = () => {
 			<section className="container px-4 py-12 mx-auto">
 				<div className="grid gap-4 mx-4 sm:grid-cols-12">
 					<div className="col-span-12 sm:col-span-3">
-						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
-							<h3 className="text-3xl font-semibold text-[#AC4949]">Work History</h3>
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-primary">
+							<h3 className="text-3xl font-semibold text-primary">Work History</h3>
 							<span className="text-sm font-bold text-justify uppercase text-gray-400">
 								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
 								traditional payment systems for a seamless web experience.
@@ -179,10 +179,10 @@ const Portfolio = () => {
 							{workExperiencesList?.length > 0 &&
 								workExperiencesList.map((experience, index) => (
 									<div
-										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#AC4949] before:animate-bounce"
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-primary before:animate-bounce"
 										key={index}>
 										<div className="flex w-full justify-between">
-											<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+											<div className="font-caveat font-medium text-2xl text-primary mb-1 sm:mb-0">
 												{experience?.workRole}
 											</div>
 											<time className="inline-flex items-center justify-center text-xs font-semibold uppercase w-fit h-6 px-3 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
@@ -201,8 +201,8 @@ const Portfolio = () => {
 			<section className="container px-4 py-12 mx-auto">
 				<div className="grid gap-4 mx-4 sm:grid-cols-12">
 					<div className="col-span-12 sm:col-span-3">
-						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#AC4949]">
-							<h3 className="text-3xl font-semibold text-[#AC4949]">My Projects</h3>
+						<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-primary">
+							<h3 className="text-3xl font-semibold text-primary">My Projects</h3>
 							<span className="text-sm font-bold text-justify uppercase text-gray-400">
 								Experienced in web development using React & Node.js. Proficient in integrating blockchain with
 								traditional payment systems for a seamless web experience.
@@ -215,13 +215,13 @@ const Portfolio = () => {
 							{projectsList?.length > 0 &&
 								projectsList.map((project, index) => (
 									<div
-										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-[#AC4949] space-y-5 before:animate-bounce"
+										className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-primary space-y-5 before:animate-bounce"
 										key={index}>
 										<div className="flex w-full justify-between">
-											<div className="font-caveat font-medium text-2xl text-[#AC4949] mb-1 sm:mb-0">
+											<div className="font-caveat font-medium text-2xl text-primary mb-1 sm:mb-0">
 												{project?.title}
 											</div>
-											<p className="inline-flex items-center justify-center text-xs font-semibold uppercase w-fit h-8 px-3 mb-3 sm:mb-0 bg-[#AC4949] text-white rounded-md">
+											<p className="inline-flex items-center justify-center text-xs font-semibold uppercase w-fit h-8 px-3 mb-3 sm:mb-0 bg-primary text-white rounded-md">
 												More Details
 											</p>
 										</div>
