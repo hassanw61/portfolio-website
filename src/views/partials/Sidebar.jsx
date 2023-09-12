@@ -1,13 +1,31 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { BiLogoLinkedin, BiSolidBriefcase } from "react-icons/bi";
+import { BiLogoLinkedin, BiLogoUpwork, BiSolidBriefcase } from "react-icons/bi";
 import { AiOutlineGithub, AiFillPhone } from "react-icons/ai";
-import { BsFileEarmarkText, BsFillFileEarmarkPdfFill, BsStars, BsWhatsapp } from "react-icons/bs";
+import { BsFileEarmarkText, BsFillFileEarmarkPdfFill, BsFillMenuAppFill, BsStars, BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaHandshake } from "react-icons/fa";
 import { Transition } from "@headlessui/react";
 
 const Sidebar = () => {
 	const location = useLocation();
+
+	const userProfile = {
+		name: "Faiq Nadeem",
+		designation: "Full Stack Developer",
+	};
+	const iconClassNames = "text-md";
+
+	const getInTouchLinks = [
+		{ link: "https://github.com/faiq-nadeem", icon: <AiOutlineGithub className={iconClassNames} /> },
+		{ link: "https://www.linkedin.com/in/faiq-nadeem", icon: <BiLogoLinkedin className={iconClassNames} /> },
+		{ link: "+92321423028", icon: <AiFillPhone className={iconClassNames} /> },
+		{ link: "chfaiqnadeem@gmail.com", icon: <MdEmail className={iconClassNames} /> },
+		{ link: "", icon: <BiLogoUpwork className={iconClassNames} /> },
+		{
+			link: "https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F",
+			icon: <BsWhatsapp className={iconClassNames} />,
+		},
+	];
 
 	return (
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
@@ -21,8 +39,8 @@ const Sidebar = () => {
 						/>
 					</div>
 					<div className="flex flex-col space-y-0">
-						<h1 className="font-medium text-3xl uppercase">Faiq Nadeem</h1>
-						<h1 className="font-light text-2xl">Full-Stack Developer</h1>
+						<h1 className="font-medium text-3xl uppercase">{userProfile?.name}</h1>
+						<h1 className="font-light text-2xl">{userProfile?.designation}</h1>
 					</div>
 				</div>
 
@@ -79,32 +97,17 @@ const Sidebar = () => {
 					<div className="flex flex-col justify-between">
 						<div className="flex items-center justify-between">
 							<h1 className="font-extralight text-md mb-3">Get in touch</h1>
-							<div className="md:hidden">
-								{/* <button onClick={toggleMenu} className="text-white hover:text-gray-300 focus:outline-none">
-									<div className="border rounded-md py-1 px-2">
-										<FiMenu className="w-[24px] h-[24px]" />
-									</div>
-								</button> */}
-							</div>
 						</div>
 						<div className="flex w-full justify-start space-x-3">
-							<Link to="https://github.com/faiq-nadeem" target="__blank">
-								<AiOutlineGithub className="text-2xl" />
-							</Link>
-							<Link to="https://www.linkedin.com/in/faiq-nadeem" target="__blank">
-								<BiLogoLinkedin className="text-2xl" />
-							</Link>
-							<Link to="mailto:chfaiqnadeem@gmail.com">
-								<MdEmail className="text-2xl" />
-							</Link>
-							<Link to="tel:+923214232028">
-								<AiFillPhone className="text-2xl" />
-							</Link>
-							<Link
-								to="https://wa.me/9232142320289?text=Hello%2C%20I%20have%20a%20question%20about%20your%20service.%20Can%20we%20have%20a%20meeting%3F"
-								target="__blank">
-								<BsWhatsapp className="text-2xl" />
-							</Link>
+							{getInTouchLinks?.length > 0 &&
+								getInTouchLinks.map(
+									(getInTouchLink, index) =>
+										getInTouchLink?.link && (
+											<Link to={getInTouchLink?.link} target="__blank" key={index}>
+												{getInTouchLink?.icon}
+											</Link>
+										),
+								)}
 						</div>
 					</div>
 				</div>
