@@ -7,10 +7,9 @@ const CoverLetter = () => {
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
 			<div className="w-full flex flex-col font-Poppins px-8 py-6 space-y-7">
 				<div className="flex flex-col space-y-5">
-					<h1 className="font-semibold text-4xl text-primary">Cover Letter</h1>
-					<h2 className="font-semibold text-lg text-primary">
+					<h1 className="font-semibold text-4xl text-primary">
 						A full-stack software engineer with over 10+ years of experience.
-					</h2>
+					</h1>
 				</div>
 				<div>
 					<p className="font-light text-lg text-justify">
@@ -34,7 +33,7 @@ const CoverLetter = () => {
 						<li>researching possible techs,</li>
 						<li>leading, launching and monitoring the project.</li>
 					</ul>
-					<p className="font-normal text-lg italic">Call me a Swiss Army Knife in terms of software.</p>
+					<p className="font-normal text-3xl text-primary italic">Call me a Swiss Army Knife in terms of software.</p>
 				</div>
 
 				<div className="my-4">
@@ -66,107 +65,7 @@ const CoverLetter = () => {
 							huge experience in almost all of the JS ecosystems, by having used in the past many libraries like React,
 							Redux, Redux-Observable, jQuery, Lodash/Underscore, and many else. What you can expect from me
 						</li>
-						<li>
-							As a developer, I bring a strong set of skills and qualities to the table, ensuring a productive and
-							collaborative working relationship.
-							<span className="font-semibold">Here's what you can expect from me:</span>
-						</li>
-						<li>
-							<span className="font-semibold">Technical Proficiency: </span> I possess strong technical skills and
-							expertise in various programming languages and technologies relevant to web development, including React.js.
-						</li>
-						<li>
-							<span className="font-semibold">Problem-Solving Abilities: </span>I excel at analyzing and solving technical
-							challenges. I am resourceful and have the ability to identify innovative solutions to overcome obstacles.
-						</li>
-						<li>
-							<span className="font-semibold">Strong Work Ethic: </span>I am committed to delivering high-quality code and
-							meeting project deadlines. I take ownership of my work and pay attention to detail to ensure that the final
-							product meets the required standards.
-						</li>
-						<li>
-							<span className="font-semibold">Code Quality and Testing: </span>I am committed to writing clean, modular,
-							and maintainable code. I understand the importance of testing and implementing best practices to ensure a
-							robust and reliable application.
-						</li>
-						<li>
-							<span className="font-semibold">Collaboration: </span>
-							Collaboration: I am a team player and enjoy collaborating with colleagues to achieve common goals. I actively
-							participate in discussions, share ideas, and provide constructive feedback to contribute to a positive and
-							productive work environment.
-						</li>
-						<li>
-							<span className="font-semibold"> Adaptability: </span>
-							Adaptability: I am adaptable and can easily adjust to changing project requirements, deadlines, and
-							technologies. I thrive in dynamic environments and am eager to take on new challenges. What I have been doing
-							so for (Frontend)
-						</li>
-						<p className="font-semibold">Here is a summary of what I have been doing so far in my career:</p>
-						<li>
-							<span className="font-semibold">React Development:</span>I have been actively involved in developing frontend
-							applications using React, a popular JavaScript library for building user interfaces. React allows to create
-							reusable UI components and efficiently manage the state of your application.
-						</li>
-						<li>
-							<span className="font-semibold">Component-Based Architecture:</span>I have experienced in building
-							applications using a component-based architecture, where the user interface is divided into reusable and
-							modular components. This approach promotes code reusability, maintainability, and scalability.
-						</li>
-						<li>
-							<span className="font-semibold">React Ecosystem: </span>I have knowledge and experience with various tools
-							and libraries within the React ecosystem. This includes using React Router for client-side routing, Redux or
-							React Context for state management, and Axios or Fetch for handling API requests.
-						</li>
-						<li>
-							<span className="font-semibold"> React Hooks </span>I am familiar with React Hooks, introduced in React 16.8,
-							which provide a way to use state and other React features without writing class components. Hooks like
-							useState and useEffect allows to manage state and perform side effects in functional components.
-						</li>
-						<li>
-							<span className="font-semibold">Responsive Design: </span>I have experience in creating responsive designs
-							using React. I know CSS techniques and responsive frameworks like Bootstrap or Material-UI to ensure that
-							your applications adapt seamlessly across different screen sizes and devices.
-						</li>
-						<li>
-							<span className="font-semibold">Testing:</span>I understand the importance of testing in frontend
-							development. I have experience with testing frameworks like Jest and Enzyme, writing unit tests, integration
-							tests, or end-to-end tests to ensure the quality and reliability of your React applications.
-							<li>
-								<span className="font-semibold">Deployment:</span>I have experience in deploying web applications. This
-								involves tasks such as configuring web servers, deploying code to hosting platforms, setting up CI/CD
-								pipelines, and managing the deployment process.
-							</li>
-							<span className="font-semibold">Continuous Learning: </span> As a frontend developer using React, I actively
-							stay updated with the latest features, best practices, and trends in the React ecosystem. I explore new
-							libraries, attend conferences, and engage with the React community to enhance my skills and knowledge.
-							Overall, My experience as a frontend developer using React showcases my expertise in building reusable and
-							modular UI components, managing state effectively, optimizing performance, and staying current with the
-							evolving React ecosystem. My skills and dedication to continuous learning make me a valuable asset in
-							React-based frontend development projects.
-						</li>
-						<p className="font-semibold">What Tech Stack I worked on:</p>
-						<p>
-							I am able to build dynamic and visually appealing web applications using React, structure the content with
-							HTML, style it with CSS, and utilize the utility classes provided by Tailwind CSS to expedite the development
-							process.
-						</p>
-						<p className="font-semibold">My tech stack includes:</p>
-						<li>
-							<span className="font-semibold">React:</span>I have experience working with React, a popular JavaScript
-							library for building user interfaces. React allows to create reusable components and manage the state of your
-							applications efficiently.
-						</li>
-						<li>
-							<spa className="font-semibold">HTML: </spa>I am proficient in writing HTML (Hypertext Markup Language), which
-							is used to structure and present content on the web.
-						</li>
-						<li>
-							<span className="font-semibold">CSS: </span>I am experienced and knowledgeable in CSS, which is used to style
-							and layout HTML elements, and Tailwind CSS, a utility-first CSS framework. Tailwind CSS provides a wide range
-							of predefined utility classes for quickly styling components and creating responsive user interfaces
-							efficiently. By combining my expertise in CSS and Tailwind CSS, I have the ability to effectively design and
-							develop visually appealing and responsive web interfaces.
-						</li>
+
 						<li>
 							<span className="font-semibold">Redux: </span>I am experienced in using Redux as a predictable state
 							container. Redux helps manage the state of your application in a centralized manner, making it easier to
