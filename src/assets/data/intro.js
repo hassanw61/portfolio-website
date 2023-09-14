@@ -17,5 +17,5 @@ export const introInfo = {
 	headline: "However you say 👋, I’am ready to listen",
 	description:
 		"5+ years of crafting Front and Back-End solutions. Merging blockchain with Full-Stack technologies. Spearheading web 3.0 evolution.",
-	meetingLink: "https://calendly.com/faiq-nadeem",
+	meetingLink: "https://calendly.com/faiq-nadeem/30min",
 };

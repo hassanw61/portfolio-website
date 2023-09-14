@@ -7,5 +7,5 @@ export const contactInfo = {
 	nextAvailable: "October, 2023",
 	description:
 		"Reach Out Today And I'll Provide You With My Comprehensive Onboarding Package Designed For Full-Time Employment	Or Contract Based Jobs. This Package Covers Various Aspects That Potential Employers Often Inquire About, Such As My Salary Expectations And The Seamless Integration Process Into Your Company.",
-	hireMeLink: "https://calendly.com/faiq-nadeem",
+	hireMeLink: "https://calendly.com/faiq-nadeem/30min",
 };
