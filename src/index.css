@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 .type-animation {
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: .15em solid #9A1E1E;
-	/* The cursor */
-	width: 0;
-	animation: typing 3.5s steps(40, end), blink-caret .5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #9a1e1e;
+  /* The cursor */
+  width: 0;
+  animation: typing 3.5s steps(40, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {
-	0% {
-		width: 0
-	}
+  0% {
+    width: 0;
+  }
 
-	100% {
-		width: 100%
-	}
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-	50% {
-		border-color: transparent
-	}
+  50% {
+    border-color: transparent;
+  }
 }

@@ -31,9 +31,10 @@ const Intro = () => {
 	useEffect(() => {
 		const typedHelloParagraph = new Typed(HelloParagraph.current, {
 			strings: [
-				`<div class="flex flex-col space-y-10"><h1 class="font-semibold text-5xl">${introInfo?.whoAmI}</h1><span class="font-thin text-5xl italic"> ${introInfo?.headline}</span><p class="font-medium text-4xl">${introInfo?.description}</p></div>`,
+				`<div class="flex flex-col space-y-7 md:space-y-10"><h1 class="font-semibold text-2xl md:text-5xl">${introInfo?.whoAmI}</h1><span class="font-thin text-2xl md:text-5xl italic"> ${introInfo?.headline}</span><p class="font-medium text-2xl md:text-4xl">${introInfo?.description}</p></div>`,
 			],
 			typeSpeed: 5,
+			showCursor: false,
 			onStart: () => setHelloTextLoaded(false),
 			onComplete: () => setHelloTextLoaded(true),
 		});
@@ -46,9 +47,9 @@ const Intro = () => {
 
 	return (
 		<Transition appear={true} show={true} enter="transition-opacity duration-1000" enterFrom="opacity-0" enterTo="opacity-100">
-			<div className="flex flex-col gap-2 text-primary font-Poppins md:px-24 py-12 space-y-10">
+			<div className="flex flex-col gap-2 text-primary font-Poppins md:px-24 py-12 space-y-7 md:space-y-10">
 				<h1
-					className={`font-semibold text-5xl transition-all duration-500 ${
+					className={`font-semibold text-2xl md:text-5xl transition-all duration-500 ${
 						fade ? "opacity-100 transform translate-y-0" : "opacity-0 transform -translate-y-4"
 					}`}>
 					{introInfo?.helloInDifferentLanguages[currentIndex]},
